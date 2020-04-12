@@ -1,0 +1,25 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      profile: dev
+      #面向服务，允许被发现
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+#是否需要权限拉去，默认是true,如果不false就不允许你去拉取配置中心Server更新的内容
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health
+

@@ -1,0 +1,22 @@
+#server.port=8761
+#eureka.instance.hostname=localhost
+#eureka.client.register-with-eureka=false
+#eureka.client.fetch-registry=false
+#eureka.client.service-url.defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+server:
+  port: 1212
+spring:
+  application:
+    name: eureka-registry  #服务名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1212/eureka/  #Eureka Server地址
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    metadata-map:
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  server:
+    #是否开启安全保护，默认是开启的，如果默认开启，注册中心的服务列表就算有些服务断开了，也会继续保存
+    enable-self-preservation: false

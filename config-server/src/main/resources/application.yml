@@ -1,0 +1,17 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liyunlong0912/spring-cloud.git
+          username: 623285075@qq.com
+          password: wy489522lyl
+          force-pull: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
