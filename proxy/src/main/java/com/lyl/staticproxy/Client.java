@@ -1,0 +1,20 @@
+package com.lyl.staticproxy;
+
+/**
+ * Client
+ *
+ * @author liyl
+ * @date 2020-4-13
+ */
+public class Client {
+
+    public static void main(String[] args) {
+        Host host = new Host();
+        // host.rent();
+
+        Proxy proxy = new Proxy(host);
+        proxy.seeHouse();
+        proxy.rent();
+
+    }
+}
