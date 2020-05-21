@@ -1,0 +1,8 @@
+# SpringBoot \u6240\u6709\u914D\u7F6E\u7C7B  \u90FD\u6709\u4E00\u4E2A\u81EA\u52A8\u914D\u7F6E\u7C7B  RedisAutoConfiguration  RedisProperties.class
+# \u81EA\u52A8\u914D\u7F6E\u7C7B\u90FD\u4F1A\u7ED1\u5B9A\u4E00\u4E2Aproperties \u914D\u7F6E\u6587\u4EF6
+
+# Redis\u914D\u7F6E
+spring:
+  redis:
+    host: 192.168.2.231
+    port: 6379
